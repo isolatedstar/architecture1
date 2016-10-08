@@ -41,15 +41,14 @@ public class QueueReceiver implements ServletContextListener{
 	private IStoreService iss = null;
 
 	public void acceptMsg() {
-		Connection connection = null;
-		final Session session;
+//		Connection connection = null;
+//		final Session session;
 		try {
-			ActiveMQConnectionFactory cf = new ActiveMQConnectionFactory(
-					"tcp://192.168.1.106:61676");
-			
-			for(int i=0;i<1;i++){
-				new MyT(ics,ios,iods,iss,cf).start();
-			}
+//			ActiveMQConnectionFactory cf = new ActiveMQConnectionFactory("tcp://192.168.1.106:61676");
+//			
+//			for(int i=0;i<1;i++){
+//				new MyT(ics,ios,iods,iss,cf).start();
+//			}
 
 //			connection = cf.createConnection();
 //			connection.start();

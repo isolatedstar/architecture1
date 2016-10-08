@@ -12,14 +12,14 @@ import fm.last.moji.MojiFile;
 import fm.last.moji.spring.SpringMojiBean;
 @Service
 public class SpringMojiTest {
-	@Autowired
-	private SpringMojiBean moji = new SpringMojiBean();
-
-	public static void main(String[] args)throws Exception {
-		ApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
-		SpringMojiTest t = (SpringMojiTest)ctx.getBean("springMojiTest");
-		
-		MojiFile mf = t.moji.getFile("k3");
+//	@Autowired
+//	private SpringMojiBean moji = new SpringMojiBean();
+//
+//	public static void main(String[] args)throws Exception {
+//		ApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
+//		SpringMojiTest t = (SpringMojiTest)ctx.getBean("springMojiTest");
+//		
+//		MojiFile mf = t.moji.getFile("k3");
 		
 //		OutputStream out = null;
 //		try {
@@ -30,15 +30,15 @@ public class SpringMojiTest {
 //			out.close();
 //		}
 		
-		InputStream in = null;
-		try {
-			in = mf.getInputStream();
-			byte[] bs = new byte[in.available()];
-			in.read(bs);
-			System.out.println("the content===="+new String(bs));
-		} finally {
-			in.close();
-		}
+//		InputStream in = null;
+//		try {
+//			in = mf.getInputStream();
+//			byte[] bs = new byte[in.available()];
+//			in.read(bs);
+//			System.out.println("the content===="+new String(bs));
+//		} finally {
+//			in.close();
+//		}
 
 
 		
@@ -56,11 +56,11 @@ public class SpringMojiTest {
 		
 //		mf.delete();
 		
-		List<MojiFile> list = t.moji.list("k");
-		for(MojiFile m : list){
-			System.out.println("mf==="+m);
-		}
+//		List<MojiFile> list = t.moji.list("k");
+//		for(MojiFile m : list){
+//			System.out.println("mf==="+m);
+//		}
 		
-	}
+//	}
 
 }
